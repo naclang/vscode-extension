@@ -48,4 +48,4 @@ code --install-extension nac-language-0.0.1.vsix
 ## Contributing
 
 * Feel free to **Fork** the repository, make your changes, and submit a **Pull Request**!
-* You can share suggestions or report bugs via the [Issues](https://github.com/naclang/nac/issues) section.
+* You can share suggestions or report bugs via the [Issues](https://github.com/naclang/vscode-extension/issues) section.
