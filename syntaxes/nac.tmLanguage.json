@@ -1,0 +1,41 @@
+{
+  "scopeName": "source.nac",
+  "name": "NaC",
+  "patterns": [
+    {
+      "name": "comment.line.double-slash.nac",
+      "match": "//.*$"
+    },
+    {
+      "name": "keyword.control.nac",
+      "match": "\\b(fn|rn|if|for|in|out|time|break|continue|array)\\b"
+    },
+    {
+      "name": "constant.numeric.nac",
+      "match": "\\b\\d+(\\.\\d+)?\\b"
+    },
+    {
+      "name": "string.quoted.double.nac",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.nac",
+          "match": "\\\\."
+        }
+      ]
+    },
+    {
+      "name": "variable.other.nac",
+      "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
+    },
+    {
+      "name": "keyword.operator.nac",
+      "match": "\\+\\+|--|==|!=|<=|>=|&&|\\|\\||[+\\-*/%=<>!]"
+    },
+    {
+      "name": "punctuation.terminator.nac",
+      "match": "[;:,\\[\\]\\(\\){}]"
+    }
+  ]
+}

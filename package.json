@@ -1,0 +1,39 @@
+{
+  "name": "nac-language",
+  "displayName": "NaC Language",
+  "description": "NaC Programming Language Support",
+  "version": "0.0.1",
+  "publisher": "naclang",
+  "icon": "images/icon.png",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "activationEvents": [
+    "onLanguage:nac"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "nac",
+        "aliases": ["NaC", "nac"],
+        "extensions": [".nac"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "nac",
+        "scopeName": "source.nac",
+        "path": "./syntaxes/nac.tmLanguage.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "typescript": "^5.1.6",
+    "vscode": "^1.80.0"
+  }
+}
