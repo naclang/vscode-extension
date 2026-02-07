@@ -23,10 +23,10 @@ vsce package
 ```
 
 
-This command generates the `nac-language-0.0.1.vsix` file.
+This command generates the `nac-language-{version}.vsix` file.
 2. **Install to VSCode:**
 ```bash
-code --install-extension nac-language-0.0.1.vsix
+code --install-extension nac-language-{version}.vsix
 
 ```
 
