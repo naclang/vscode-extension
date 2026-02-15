@@ -2,9 +2,9 @@
   "name": "nac-language",
   "displayName": "NaC Language",
   "description": "NaC Programming Language Support",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "naclang",
-  "icon": "images/icon.png",
+  "icon": "images/logo.png",
   "engines": {
     "vscode": "^1.80.0"
   },

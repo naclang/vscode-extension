@@ -8,7 +8,11 @@
     },
     {
       "name": "keyword.control.nac",
-      "match": "\\b(fn|rn|if|for|in|out|time|break|continue|array)\\b"
+      "match": "\\b(fn|rn|if|for|while|in|out|time|break|continue|array|http)\\b"
+    },
+    {
+      "name": "support.function.builtin.nac",
+      "match": "\\b(sqrt|pow|sin|cos|tan|abs|floor|ceil|round|log|exp|length|upper|lower|push|pop|trim|replace|substr|indexOf|first|last|reverse|slice|join|read|write|append)\\b"
     },
     {
       "name": "constant.numeric.nac",

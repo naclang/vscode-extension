@@ -1,51 +1,75 @@
 # NaC Language VSCode Extension
 
-The **NaC Language** extension provides support for the [NaC Programming Language](https://github.com/naclang/nac) within VSCode. It includes syntax highlighting and essential language support.
+VSCode için NaC dil desteği eklentisi.
 
----
+## Özellikler
 
-## Features
+- ✅ Syntax highlighting (sözdizimi vurgulama)
+- ✅ Keyword highlighting (fn, rn, if, for, while, http, vb.)
+- ✅ Built-in fonksiyon vurgulama
+- ✅ Yorum satırları (//)
+- ✅ String ve sayı vurgulama
+- ✅ Otomatik parantez kapama
+- ✅ Code folding desteği
 
-* **Syntax Highlighting** for files with the `.nac` extension.
-* Core language support tailored for **NaC**.
-* Fast, lightweight, and optimized for performance.
+## Kullanım
 
----
+1. `.nac` uzantılı bir dosya açın
+2. Syntax highlighting otomatik olarak aktif olacak
+3. Sağ alt köşede "NaC" dili seçili olmalı
 
-## Installation
+## Desteklenen Sözdizimi
 
-### Local Installation (via VSIX)
-
-1. **Build the `.vsix` package:**
-```bash
-vsce package
-
+### Keywords (Anahtar Kelimeler)
+```nac
+fn, rn, if, for, while, in, out, time, break, continue, array, http
 ```
 
-
-This command generates the `nac-language-{version}.vsix` file.
-2. **Install to VSCode:**
-```bash
-code --install-extension nac-language-{version}.vsix
-
+### Built-in Functions
+```nac
+sqrt, pow, sin, cos, tan, abs, floor, ceil, round, log, exp
+length, upper, lower, push, pop, trim, replace, substr, indexOf
+first, last, reverse, slice, join, read, write, append
 ```
 
+### Operators
+```nac
++, -, *, /, %, ==, !=, <, >, <=, >=, &&, ||, !, ++, --
+```
 
+## Örnek
 
-> **Note:** This method only works on your **local machine**. Others will not be able to use the extension unless you share the `.vsix` file with them.
+```nac
+// HTTP GET isteği
+http("GET", "https://api.ipify.org/?format=json");
 
----
+// While döngüsü
+x = 0;
+while(x < 5) {
+    out(x);
+    x++;
+};
 
-## Developer Notes
+// Fonksiyon tanımlama
+fn fibonacci(n) {
+    if(n <= 1) {
+        rn n;
+    };
+    rn fibonacci(n-1) + fibonacci(n-2);
+};
+```
 
-* **Main Entry Point:** `extension.js`
-* **Language Configuration:** `language-configuration.json`
-* **Syntax Definitions:** `syntaxes/nac.tmLanguage.json`
-* **Required VSCode Engine:** `^1.80.0`
+## Sorun Giderme
 
----
+**Syntax highlighting çalışmıyor:**
+- VSCode'u tamamen kapatıp yeniden açın
+- Dosya uzantısının `.nac` olduğundan emin olun
+- Sağ alt köşeden manuel olarak "NaC" dilini seçin
 
-## Contributing
+**Extension görünmüyor:**
+- Extensions klasörünün doğru konumda olduğundan emin olun
+- `package.json` dosyasının geçerli JSON formatında olduğunu kontrol edin
 
-* Feel free to **Fork** the repository, make your changes, and submit a **Pull Request**!
-* You can share suggestions or report bugs via the [Issues](https://github.com/naclang/vscode-extension/issues) section.
+## Lisans
+
+MIT
