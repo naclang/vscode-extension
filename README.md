@@ -1,75 +1,73 @@
-# NaC Language VSCode Extension
+# NaC for Visual Studio Code
 
-VSCode için NaC dil desteği eklentisi.
+The VS Code NaC extension provides rich language support for the **NaC programming language**.
 
-## Özellikler
+## Requirements
 
-- ✅ Syntax highlighting (sözdizimi vurgulama)
-- ✅ Keyword highlighting (fn, rn, if, for, while, http, vb.)
-- ✅ Built-in fonksiyon vurgulama
-- ✅ Yorum satırları (//)
-- ✅ String ve sayı vurgulama
-- ✅ Otomatik parantez kapama
-- ✅ Code folding desteği
+* **Visual Studio Code 1.80** or newer.
+* **NaC Language Runtime** installed on your system.
 
-## Kullanım
+## Quick Start
 
-1. `.nac` uzantılı bir dosya açın
-2. Syntax highlighting otomatik olarak aktif olacak
-3. Sağ alt köşede "NaC" dili seçili olmalı
+Welcome! 👋🏻
+Whether you are new to NaC or an experienced developer, we hope this extension enhances your development experience.
 
-## Desteklenen Sözdizimi
+1. **Install NaC** from the [official installation page](https://naclang.github.io/install.html) if you haven't already.
+2. **Install the VS Code NaC extension** from the Marketplace.
+3. **Open any `.nac` file** to automatically activate the extension. The **NaC status bar** will appear in the bottom right corner of the window.
 
-### Keywords (Anahtar Kelimeler)
-```nac
-fn, rn, if, for, while, in, out, time, break, continue, array, http
-```
+You are ready to NaC :-) 🚀🚀🚀
 
-### Built-in Functions
-```nac
-sqrt, pow, sin, cos, tan, abs, floor, ceil, round, log, exp
-length, upper, lower, push, pop, trim, replace, substr, indexOf
-first, last, reverse, slice, join, read, write, append
-```
+---
 
-### Operators
-```nac
-+, -, *, /, %, ==, !=, <, >, <=, >=, &&, ||, !, ++, --
-```
+## Feature Highlights
 
-## Örnek
+* **Syntax Highlighting** - Vivid colors for keywords, strings, and numeric values.
+* **IntelliSense** - Highlighting for built-in functions like `http`, `out`, and math utilities.
+* **Code Navigation** - Support for code folding to manage large logic blocks.
+* **Editing Support** - Automatic bracket matching and comment toggling (`//`).
+
+## What's Next
+
+* Explore the [NaC Language Documentation](https://naclang.github.io/docs) to learn about syntax and built-in functions.
+* Check out the **Example** section below to see NaC in action.
+* If you encounter any bugs, please [file an issue](https://github.com/naclang/vscode-extension/issues) on our GitHub repository.
+
+---
+
+## Example Snippet
 
 ```nac
-// HTTP GET isteği
+// HTTP GET request example
 http("GET", "https://api.ipify.org/?format=json");
 
-// While döngüsü
-x = 0;
-while(x < 5) {
-    out(x);
-    x++;
-};
-
-// Fonksiyon tanımlama
+// Fibonacci function definition
 fn fibonacci(n) {
     if(n <= 1) {
         rn n;
     };
     rn fibonacci(n-1) + fibonacci(n-2);
 };
+
+// Using 'out' for console output
+out(fibonacci(10));
+
 ```
 
-## Sorun Giderme
+## Troubleshooting
 
-**Syntax highlighting çalışmıyor:**
-- VSCode'u tamamen kapatıp yeniden açın
-- Dosya uzantısının `.nac` olduğundan emin olun
-- Sağ alt köşeden manuel olarak "NaC" dilini seçin
+**Syntax highlighting is not working:**
 
-**Extension görünmüyor:**
-- Extensions klasörünün doğru konumda olduğundan emin olun
-- `package.json` dosyasının geçerli JSON formatında olduğunu kontrol edin
+* Ensure the file extension is strictly `.nac`.
+* Restart VS Code to refresh the extension host.
+* Check the bottom-right corner to ensure "NaC" is the active language mode.
 
-## Lisans
+**Extension is not appearing:**
 
-MIT
+* Verify that the extension is correctly placed in your `.vscode/extensions` folder.
+* Check that your `package.json` file is valid and follows the VS Code extension schema.
+
+
+## License
+
+[MIT](https://raw.githubusercontent.com/naclang/vscode-extension/refs/heads/main/LICENSE)

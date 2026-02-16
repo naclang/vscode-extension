@@ -2,7 +2,7 @@
   "name": "nac-language",
   "displayName": "NaC Language",
   "description": "NaC Programming Language Support",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "naclang",
   "icon": "images/logo.png",
   "engines": {
