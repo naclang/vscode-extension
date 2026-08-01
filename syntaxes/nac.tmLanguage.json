@@ -11,8 +11,12 @@
       "match": "\\b(fn|rn|if|for|while|in|out|time|break|continue|array|http)\\b"
     },
     {
+      "name": "constant.language.nac",
+      "match": "\\b(true|false|null)\\b"
+    },
+    {
       "name": "support.function.builtin.nac",
-      "match": "\\b(sqrt|pow|sin|cos|tan|abs|floor|ceil|round|log|exp|length|upper|lower|push|pop|trim|replace|substr|indexOf|first|last|reverse|slice|join|read|write|append)\\b"
+      "match": "\\b(sqrt|pow|sin|cos|tan|abs|floor|ceil|round|log|exp|length|upper|lower|push|pop|trim|replace|substr|indexOf|first|last|reverse|slice|join|read|write|append|split|contains|has|map|typeOf|isNull|toInt|toFloat|toString|urlEncode|urlDecode|jsonParse|jsonStringify|httpRequest|httpJson|httpGet|httpPost|httpPut|httpPatch|httpDelete|args|env|exit|serve|now|sleep)\\b"
     },
     {
       "name": "constant.numeric.nac",
@@ -35,7 +39,7 @@
     },
     {
       "name": "keyword.operator.nac",
-      "match": "\\+\\+|--|==|!=|<=|>=|&&|\\|\\||[+\\-*/%=<>!]"
+      "match": "\\+\\+|--|\\+=|-=|\\*=|/=|==|!=|<=|>=|&&|\\|\\||[+\\-*/%=<>!]"
     },
     {
       "name": "punctuation.terminator.nac",

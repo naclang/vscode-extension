@@ -2,8 +2,12 @@
   "name": "nac-language",
   "displayName": "NaC Language",
   "description": "NaC Programming Language Support",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "naclang",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/naclang/vscode-extension.git"
+  },
   "icon": "images/logo.png",
   "engines": {
     "vscode": "^1.80.0"
@@ -30,7 +34,54 @@
         "scopeName": "source.nac",
         "path": "./syntaxes/nac.tmLanguage.json"
       }
-    ]
+    ],
+    "commands": [
+      {
+        "command": "nac.run",
+        "title": "NaC: Run File",
+        "icon": "$(play)"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "nac.run",
+          "when": "editorLangId == nac"
+        }
+      ],
+      "editor/title": [
+        {
+          "command": "nac.run",
+          "when": "editorLangId == nac",
+          "group": "navigation"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "nac.run",
+          "when": "editorLangId == nac",
+          "group": "navigation"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "nac.run",
+        "key": "ctrl+alt+n",
+        "mac": "cmd+alt+n",
+        "when": "editorLangId == nac"
+      }
+    ],
+    "configuration": {
+      "title": "NaC",
+      "properties": {
+        "nac.executablePath": {
+          "type": "string",
+          "default": "",
+          "description": "Path to the nac / nac.exe interpreter executable. Leave empty to use \"nac\" (or \"nac.exe\" on Windows) from your PATH."
+        }
+      }
+    }
   },
   "devDependencies": {
     "typescript": "^5.1.6",
